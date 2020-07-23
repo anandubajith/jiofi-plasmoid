@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=JioFi Status
+Comment=An applet to display information of connected JioFi Router
+Encoding=UTF-8
+Icon=applications-network
+ServiceTypes=Plasma/Applet
+Type=Service
+X-KDE-PluginInfo-Author=Anandu B Ajith
+X-KDE-PluginInfo-Email=mail@anandu.net
+X-KDE-PluginInfo-Name=net.anandu.jiofistatus
+X-KDE-PluginInfo-License=LGPL
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=https://github.com/anandubajith/jiofi-plasmoid
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
