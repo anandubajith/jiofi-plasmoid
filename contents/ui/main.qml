@@ -2,8 +2,8 @@ import QtQuick 2.0
 
 Item {
   id:root
-  width: 100
-  height: 80
+  width: 200
+  height: 160
   property string batteryPercentage: ""
   property string noOfClients: ""
   property string signalStrength: ""
