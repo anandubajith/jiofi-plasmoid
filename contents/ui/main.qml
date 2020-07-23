@@ -14,10 +14,10 @@ Item {
     if (x.responseText) {
       // Couldn't parse the HTML , so using regex to extract the values
       var htmlBody = x.responseText;
-      root.batteryPercentage = htmlBody.match(/<p id="batterylevel" value="(.*)">/)[1]
-      root.noOfClients = htmlBody.match(/<p id="noOfClient" value="(.*)">/)[1]
-      root.signalStrength =htmlBody.match(/<p id="signalstrength" value="(.*)">/)[1]
-      var batteryStatus = htmlBody.match(/<p id="batterystatus" value="(.*)">/)[1]
+      root.batteryPercentage = htmlBody.match(/<input type="hidden" id="batterystatus" value="(.*)" \/>/)[1]
+      root.noOfClients = htmlBody.match(/<input type="hidden" id="noOfClient" value="(.*)" \/>/)[1]
+      root.signalStrength = htmlBody.match(/<input type="hidden" id="signalstrength" value="(.*)" \/>/)[1]
+      var batteryStatus = htmlBody.match(/<input type="hidden" id="batterystatus" value="(.*)" \/>/)[1]
       if ( batteryStatus == "Charging" ) {
         root.chargeIcon = " ⚡";
       }
@@ -35,7 +35,7 @@ Item {
     running: true
     triggeredOnStart: true
     interval: 60000
-    onTriggered: request("https://jiofi.free.beeceptor.com", parseBody)
+    onTriggered: request("http://jiofi.local.html", parseBody)
   }
 
   Column{
