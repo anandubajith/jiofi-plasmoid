@@ -24,7 +24,7 @@ Item {
     }
   }
 
-  function request(url, callback) {
+  function request(url, parseBody) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = (function f() {parseBody(xhr)});
     xhr.open('GET', url, true);
@@ -35,7 +35,7 @@ Item {
     running: true
     triggeredOnStart: true
     interval: 60000
-    onTriggered: request("https://jiofi.free.beeceptor.com",callback)
+    onTriggered: request("https://jiofi.free.beeceptor.com", parseBody)
   }
 
   Column{
